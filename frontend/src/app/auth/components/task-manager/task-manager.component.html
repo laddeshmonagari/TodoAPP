@@ -1,0 +1,11 @@
+<div class="container-fluid d-flex justify-content-center row p-0 m-0">
+    <div class="container-fluid col-11">
+        <div class="task-heading justify-content-between d-flex align-items-center mb-3">
+            <p class="fw-bold align-items-center">{{pageTitle}}</p>
+            <p class="day-date ">{{ todaysDate | date: 'EEEE, MMMM d y' }}</p>
+        </div>
+        @for (item of tasks; track $index) {
+        <app-task-item  [taskDetails]="item" ></app-task-item>
+        }
+    </div>
+</div>

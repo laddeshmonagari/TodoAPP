@@ -1,0 +1,25 @@
+<form class="custom-form p-3" [formGroup]="taskForm" (ngSubmit)="onTaskSubmit()">
+  <div class="mb-3">
+    <input type="text" class="form-control custom-input" placeholder="Title" name="title" formControlName="title">
+    <div *ngIf="taskForm.controls['title'].invalid && (taskForm.controls['title'].touched || taskForm.controls['title'].dirty)" class="text-danger">
+      Title is required
+    </div>
+  </div>
+  <div class="mb-3">
+    <textarea class="form-control custom-input" placeholder="Description" name="description" formControlName="description"></textarea>
+  </div>
+  <div class="mb-3">
+    <input type="date" class="form-control custom-input" name="dueDate" formControlName="dueDate">
+    <div *ngIf="taskForm.controls['dueDate'].invalid && (taskForm.controls['dueDate'].touched || taskForm.controls['dueDate'].dirty)" class="text-danger">
+      Due date is required
+    </div>
+  </div>
+  <div class="mb-3 form-check" *ngIf="isEditMode">
+    <input type="checkbox" class="form-check-input custom-input" name="isCompleted" formControlName="isCompleted">
+    <label class="form-check-label" for="isCompleted">Is Completed</label>
+  </div>
+  <div class="btn-submit-cancel d-flex justify-content-end mt-4">
+    <button type="button" class="close btn btn-secondary me-3" data-bs-dismiss="modal" (click)="close()">Close</button>
+    <button type="submit" class="save btn btn-primary">Save</button>
+  </div>
+</form>

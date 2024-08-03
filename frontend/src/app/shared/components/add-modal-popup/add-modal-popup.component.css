@@ -1,0 +1,13 @@
+.modal-content {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top:25%;
+    left:25%;
+    width:50%;    
+  }
+
+.modal{
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+

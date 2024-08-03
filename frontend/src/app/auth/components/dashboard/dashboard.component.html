@@ -1,0 +1,36 @@
+<div class="container-fluid d-flex justify-content-center row p-0 m-0 h-100">
+    <div class="container-fluid col-10 col-md-11 p-0 m-0">
+        <!-- Hero container -->
+        <div class="greeting-container">
+            <div class="user d-flex flex-row justify-content-between align-items-center w-100">
+                <div class="user-name ms-2 ms-sm-5 d-flex flex-column justify-content-between align-items-start p-0">
+                    <h1 class="">Hello, Beautiful Human!</h1>
+                    <p clas="">What do you want to do today?</p>
+                </div>
+                <div class="working-woman">
+                    <img class="woman-img" src="../../../../assets/images/young smiling woman working at laptop.png" alt="woman working img"/>
+                </div>
+            </div>
+        </div>
+        <!-- Header Active tasks and stat cards -->
+        <div class="continer d-flex flex-column-reverse flex-md-row h-auto justify-content-between ">
+            <div class="task-info d-flex flex-column w-sm-100 col-12 col-md-8 col-lg-9 m-0 p-0 mt-2 mt-md-0">
+                <div class="title  w-100 d-flex flex-row justify-content-between align-items-center ">
+                    <p class="fw-bold m-0">Today’s Tasks</p>
+                    <div class="events d-flex flex-row justify-content-between justify-content-md-end align-items-center mt-3">
+                        <p class="delete-tasks align-items-center" (click)="deleteAll()" >Delete All</p>
+                        <p class="d-block d-md-none ms-2 ms-sm-5  align-items-center">{{ todaysDate | date: 'EEEE, M d y' }}</p>
+                    </div>
+                </div>
+                <div class="tasks mt-2 mt-md-0">
+                    <app-task-item *ngFor="let item of taskList" [taskDetails]="item"></app-task-item>
+                </div>
+            </div>
+            <div class="stat-container col-12 d-flex flex-column justify-content-center align-items-center col-md-3 col-lg-2 m-0 p-0">
+                <p class="mt-3 ms-2 d-flex d-none d-md-block align-items-center">{{ todaysDate | date: 'EEEE, MMMM d y' }}</p>
+                <app-task-status class="w-100" [activeCount]="activeCount" [completedCount]="completedCount"></app-task-status>
+            </div>
+        </div>
+    </div>
+</div>
+

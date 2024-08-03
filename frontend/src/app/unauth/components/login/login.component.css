@@ -1,0 +1,56 @@
+.sign-in-container{
+    position: fixed;
+    background-image: url(../../../../assets/images/background-signIn.png);
+    z-index: 1;
+} 
+.register-bg {
+    background-color: rgba(237, 176, 70, 1) !important;
+}
+
+.sign-in{
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 4px #ebedef;
+    background-color: white;
+}
+.signInStyle{
+    background-color: #EDB046;
+    color: #251814;
+  }
+  .signUpStyle{
+    background-color: rgba(186, 81, 18, 1) !important;
+    color: white !important;
+  }
+
+.title h1{
+    font-size: 55px;
+    color: #BA5112;
+    margin-top: 0px;
+}
+.input-fields input {
+    font-size: 20px;
+    font-weight: 400;
+    height: 25px;
+    color: #B5B5B5;
+    box-shadow: 0px 0px 5px 4px #ebedef;
+    border: 2px solid white;
+}
+
+.input-fields button {
+    background-color: #EDB046;
+    border: #EDB046;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #251814;
+}
+
+.input-fields span {
+    font-size: 18px;
+}
+
+.navigate-here{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(186, 81, 18, 1);
+}

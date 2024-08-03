@@ -1,0 +1,91 @@
+.task{
+    height: 4.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.view-container.completed,
+.task.completed{
+    background-color: rgba(237, 176, 70, 1);
+}
+
+.task-item{
+    width: 16.43rem;
+    height: 1.75rem;
+}
+
+.task-item img{
+    margin-right: 1.25rem;
+    font-size: 1.75rem;
+}
+
+.task-item p {
+    font-size: 1.25rem;
+    line-height: 1.56rem;
+    font-weight: 400;
+}
+
+.view-container{
+    height: auto;
+    margin-top:60px;
+    box-shadow: 2px 2px 10px 0px #1212121a;
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+    right: 1rem;
+    top:1rem;
+}
+
+.view-detail{
+    height: 18.75rem;
+}
+
+.view-detail .details {
+    height: 11.87rem;
+    .header{
+        height: 3.93rem;
+    }
+}
+
+.header .title{
+    font-size: 1.75rem;
+    line-height: 2.18rem;
+    font-weight: 700;         
+}
+
+.description {
+    height: 5.437rem;
+    .heading {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.56rem;
+    }
+    .text{
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.56rem;
+    }
+}
+.buttons img{
+scale: 80%;
+}
+.manipulation-btns img {
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .task{
+        height: 2.5rem;
+        border-radius: 0.5rem;
+    }
+    .header .title{
+        font-size: 1.2rem;
+        line-height: 1.25rem;
+        font-weight: 400;         
+    }
+    .task-item img{
+        scale:75%;
+    }
+}

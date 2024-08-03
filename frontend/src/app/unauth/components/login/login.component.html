@@ -1,0 +1,23 @@
+<div class="sign-in-container w-100 h-100 m-0 p-0">
+  <div class="login row justify-content-center p-5">
+    <div class="sign-in position-absolute col-10 col-sm-8 col-md-7 p-5"
+         [ngClass]="{'register-bg': !isSignInMode, 'white-bg': isSignInMode}">
+      <div class="content">
+        <div class="title d-flex flex-column align-items-center gap-2 mb-3">
+          <h1 class="h1">To-Do App</h1>
+          <p>Start Organizing your life day to day</p>
+        </div>
+        <form class="input-fields d-flex flex-column align-items-center gap-4" (ngSubmit)="onSubmit()">
+          <input name="username" type="text" [(ngModel)]="userName" placeholder="Enter your username"
+                 class="username rounded w-100 p-4">
+          <input name="password" type="password" [(ngModel)]="password" placeholder="Enter your password"
+                 class="w-100 rounded p-4">
+          <button class="btn px-3 py-2 px-sm-4 mt-2" [ngClass]="isSignInMode ? 'signInStyle' : 'signUpStyle'"
+                  type="submit">{{ isSignInMode ? 'Sign In' : 'Sign Up' }}</button>
+          <span>{{ subTitle }}<a (click)="toggleMode()" class="navigate-here">{{ isSignInMode ? 'here' : 'here' }}</a>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

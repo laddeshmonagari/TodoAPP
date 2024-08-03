@@ -1,0 +1,45 @@
+.completed{
+    background-color: rgba(186, 81, 18, 1);
+    height: 150px;
+}
+.active{
+    height:150px;
+    background-color: rgba(237, 176, 70, 1);
+}
+
+.information img{
+    scale:70%;
+}
+
+.details{
+    color: white;
+    height: 4rem;
+    text-align: center;
+}
+
+.percent{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 767.8px) {
+    .completed,
+    .active{
+        height:auto;
+    }
+
+    .information img{
+        scale:50% !important;
+    }
+    .details{
+        height: auto;
+    }
+    .details p{
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="home row container-fluid p-0">
+    <div class="col-12 col-md-3 side-nav mb-0 mb-sm-3">
+        <app-side-navbar (titleEvent)="setTitle($event)"></app-side-navbar>
+    </div>
+    <div class="col-12 col-md-9 context">
+        <app-header [title]="title" ></app-header>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+  

@@ -1,0 +1,29 @@
+.header{
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.header-details p{
+    font-family: Lexend;
+    font-size: 1.74rem;
+    line-height:2.81rem;
+    font-weight: 400;
+}
+
+.header-details button{
+    width: 9rem;
+    border-radius: 10px;
+    background-color:rgba(186, 81, 18, 1) ;
+    border: none;
+}
+
+.header-details button p{
+    font-size: 1rem;
+    color: white;
+    display:inline;
+}
+
+.logout-btn span img{
+    scale:120%;
+    padding-left: 10px;
+}

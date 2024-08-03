@@ -1,0 +1,60 @@
+<div class="side-nav-container container-fluid p-0 d-none d-md-block">
+    <div class="logo w-100 d-flex justify-content-center align-items-center">
+        <h1 class="mt-3 fs-md-3 ms-md-5">To-Do App</h1>
+    </div>
+    <div class="option-choices d-flex flex-column align-items-center justify-content-start">
+        <button class="btn-add-task btn-primary d-flex align-items-center justify-content-center" (click)="toggleForm()">
+            <div class="btn-text d-flex flex-row justify-content-between align-items-center">
+                <p class="align-items-center d-flex m-0">Add Task</p>
+                <span class="add-task-icon d-flex align-items-center justify-content-center">
+                    <img src="../../../../assets/images/add-icon.png" alt="Add Icon">
+                </span>
+            </div>
+        </button>
+        <div class="side-nav-events d-flex flex-col align-items-center w-100">
+            <ul class="w-100 p-0">
+                <li *ngFor="let navItem of navItems" class="w-100">
+                    <a class="d-flex align-items-center justify-content-center"
+                       [routerLink]="navItem.navigateUrl"
+                       routerLinkActive="active"
+                       (click)="navigateTo(navItem)">{{ navItem.event }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- small screens header -->
+<div class="Top-bar d-flex flex-row d-md-none justify-content-between text-center mb-4 mt-2 p-0">
+    <span class="header d-flex align-items-center ms-2 ms-sm-0 fs-6">
+        To-Do App
+    </span>
+    <div class="mobile-view d-flex d-md-none flex-row align-center gap-3">
+        <button class="add-task-mobile d-flex d-md-none align-items-center justify-content-evenly  rounded gap-2 fs-6 " (click)="toggleForm()">
+            <span>Add Task</span>
+            <img src="../../../../assets/images/add-icon.png" alt="add-task">
+        </button>
+        <button class="sign-up btn btn-primary d-flex d-md-none align-items-center  justify-content-evenly rounded gap-2 fs-6 " (click)="signOut()">
+            <span>Sign out</span>
+            <img src="../../../../assets/images/signout.png" alt="vector">
+        </button>
+    </div>
+</div>
+<!-- dropdown list -->
+<div class="row d-flex justify-content-center mb-4">
+    <div class="col-10 mx-2 d-block d-md-none d-flex justify-content-center">
+        <div class="dropdown w-100">
+            <button class="ddl-header btn btn-secondary dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>{{ selectedEvent }}</span>
+                <span class="dropdown-toggle-icon"></span>
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                <li *ngFor="let navItem of navItems">
+                    <a class="dropdown-item w-100" (click)="navigateTo(navItem)">{{ navItem.event }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+
